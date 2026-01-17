@@ -1,0 +1,7 @@
+[project]
+name = "python-toy-projects"
+version = "0.1.0"
+description = "Toy projects to pass time"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
