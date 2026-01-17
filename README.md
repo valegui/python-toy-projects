@@ -22,3 +22,4 @@ uv sync
 ## Contents
 
 1. Simple Flask App
+2. Simple Flask Blog
