@@ -2,6 +2,23 @@
 
 This repository contains projects done with python. No project here is to be used in a production environment, this is purely for fun.
 
+## Usage
+
+### Pre-requisites
+
+- [uv](https://docs.astral.sh/uv/getting-started/installation/)
+
+### Install
+
+```bash
+# Create Virtual Environment
+uv venv .venv
+# Activate Virtual Environment
+source .venv/bin/activate
+# Install dependencies
+uv sync
+```
+
 ## Contents
 
 1. Simple GUI
