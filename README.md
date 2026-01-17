@@ -21,4 +21,4 @@ uv sync
 
 ## Contents
 
-1. Simple GUI
+1. Simple Flask App
