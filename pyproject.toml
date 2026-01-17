@@ -5,3 +5,9 @@ description = "Toy projects to pass time"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit>=4.5.1",
+    "ruff>=0.14.13",
+]
