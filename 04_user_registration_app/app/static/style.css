@@ -4,3 +4,26 @@ body {
     padding: 0;
     text-align: center;
 }
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form p {
+    margin: 10px 0;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px 0;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px 15px;
+}
