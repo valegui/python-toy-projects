@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
-from werkzeug.security import generate_password_hash, check_password_hash
-from wtforms import StringField, PasswordField, SubmitField, ValidationError
+from werkzeug.security import generate_password_hash
+from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Email
 from flask_wtf import FlaskForm
 
@@ -50,9 +50,9 @@ def register():
                 db.session.commit()
                 flash("Registration successful", "success")
                 return redirect(url_for("login"))
-            except Exception as e:
+            except Exception:
                 db.session.rollback()
-                flash(f"Registration failed: {str(e)}", "error")
+                flash("Registration failed", "error")
 
     return render_template("register.html", form=form)
 
