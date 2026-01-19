@@ -26,3 +26,4 @@ uv sync
 1. Simple Flask App
 2. Simple Flask Blog
 3. Contact Form App
+4. User Registration App
