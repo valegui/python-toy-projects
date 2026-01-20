@@ -27,3 +27,4 @@ uv sync
 2. Simple Flask Blog
 3. Contact Form App
 4. User Registration App
+5. Mini Weather API
