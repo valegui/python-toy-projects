@@ -28,3 +28,4 @@ uv sync
 3. Contact Form App
 4. User Registration App
 5. Mini Weather API
+6. Deploy Flask App on Heroku
