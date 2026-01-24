@@ -12,6 +12,7 @@ dependencies = [
     "flask-wtf>=1.2.2",
     "gunicorn>=23.0.0",
     "phonenumbers>=9.0.22",
+    "pillow>=12.1.0",
     "uvicorn>=0.40.0",
 ]
 

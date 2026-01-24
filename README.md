@@ -29,3 +29,4 @@ uv sync
 4. User Registration App
 5. Mini Weather API
 6. Deploy Flask App on Heroku
+7. Ascii Art Generator
