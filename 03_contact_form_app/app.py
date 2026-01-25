@@ -1,6 +1,6 @@
-from flask import Flask, render_template, flash, redirect, url_for
+from flask import Flask, flash, redirect, render_template, url_for
 from flask_wtf import FlaskForm
-from wtforms import StringField, TextAreaField, SubmitField
+from wtforms import StringField, SubmitField, TextAreaField
 from wtforms.validators import DataRequired, Email
 
 app = Flask(__name__)

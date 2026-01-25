@@ -2,9 +2,10 @@ import argparse
 import time
 
 from rich import print
-from rich.progress import Progress
-from rich.live import Live
 from rich.console import Console
+from rich.live import Live
+from rich.progress import Progress
+
 
 def time_text(minutes: int, seconds: int, color: str = "green"):
     return f"[bold {color}]{minutes:02d}:{seconds:02d}[/bold {color}]"
@@ -26,6 +27,7 @@ def countdown(live, seconds):
     live.update("[bold green]Let's start![/bold green]")
     time.sleep(1)
 
+
 def main():
     # Parser
     parser = argparse.ArgumentParser(description="Pomodoro Timer")
@@ -33,7 +35,9 @@ def main():
     parser.add_argument("--work", type=int, default=25, help="Work time in minutes")
     parser.add_argument("--rest", type=int, default=5, help="Rest time in minutes")
     parser.add_argument("--cycles", type=int, default=4, help="Number of cycles")
-    parser.add_argument("--countdown", type=int, default=5, help="Countdown time in seconds")
+    parser.add_argument(
+        "--countdown", type=int, default=5, help="Countdown time in seconds"
+    )
     args = parser.parse_args()
     # Total times
     work_time = args.work * args.cycles
@@ -50,12 +54,13 @@ def main():
     # Countdown
     with Live(console=console, screen=False, vertical_overflow="visible") as live:
         countdown(live, args.countdown)
-    
+
     with Progress() as progress:
         task = progress.add_task("Working", total=work_time * 60)
         while not progress.finished:
             progress.update(task, advance=1)
             time.sleep(1)
+
 
 if __name__ == "__main__":
     main()

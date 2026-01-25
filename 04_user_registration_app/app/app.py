@@ -1,9 +1,9 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, flash, redirect, render_template, request, url_for
 from flask_sqlalchemy import SQLAlchemy
-from werkzeug.security import generate_password_hash
-from wtforms import StringField, PasswordField, SubmitField
-from wtforms.validators import DataRequired, Email
 from flask_wtf import FlaskForm
+from werkzeug.security import generate_password_hash
+from wtforms import PasswordField, StringField, SubmitField
+from wtforms.validators import DataRequired, Email
 
 app = Flask(__name__)
 app.secret_key = "secret_key"
