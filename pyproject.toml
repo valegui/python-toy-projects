@@ -5,6 +5,7 @@ description = "Toy projects to pass time"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "beautifulsoup4>=4.14.3",
     "email-validator>=2.3.0",
     "flask>=3.1.2",
     "flask-restful>=0.3.10",

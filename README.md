@@ -30,3 +30,5 @@ uv sync
 5. Mini Weather API
 6. Deploy Flask App on Heroku
 7. Ascii Art Generator
+8. Pomodoro Timer App
+9. Social Media Scraper
