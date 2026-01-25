@@ -1,3 +1,4 @@
+import csv
 from pathlib import Path
 
 from bs4 import BeautifulSoup
@@ -26,6 +27,13 @@ def extract_posts(soup: BeautifulSoup):
     return posts
 
 
+def save_posts_to_csv(posts: list[dict], file_path: str):
+    with open(file_path, "w", newline="", encoding="utf-8") as file:
+        writer = csv.DictWriter(file, fieldnames=["username", "content", "timestamp"])
+        writer.writeheader()
+        writer.writerows(posts)
+
+
 def main():
     directory = Path(__file__).parent
     html = load_html(str(directory / "social_media.html"))
@@ -36,6 +44,7 @@ def main():
         print(f"Content: {post['content']}")
         print(f"Timestamp: {post['timestamp']}")
         print("-" * 20)
+    save_posts_to_csv(posts, str(directory / "social_media.csv"))
 
 
 if __name__ == "__main__":
