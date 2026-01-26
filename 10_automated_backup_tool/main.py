@@ -40,12 +40,15 @@ def write_log(backup_dir, log_file, files):
 
 def main():
     parser = argparse.ArgumentParser(description="Automated Backup Tool")
-    parser.add_argument("--source", type=str, required=True, help="Source directory to backup")
+    parser.add_argument(
+        "--source", type=str, required=True, help="Source directory to backup"
+    )
     parser.add_argument("--backup", type=str, required=True, help="Backup directory")
     parser.add_argument("--log", type=str, required=True, help="Log file")
     args = parser.parse_args()
-    backup_files(args.source, args.backup)
-    write_log(args.backup, args.log, list_files(args.source))
+    backup_dir = create_backup_directory(args.backup)
+    backup_files(args.source, backup_dir)
+    write_log(backup_dir, args.log, list_files(args.source))
 
 
 if __name__ == "__main__":
