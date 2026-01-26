@@ -32,3 +32,4 @@ uv sync
 7. Ascii Art Generator
 8. Pomodoro Timer App
 9. Social Media Scraper
+10. Automated Backup Tool
